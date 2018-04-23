@@ -6,12 +6,12 @@ param (
     #Get the bits for the HANA installation and copy them to C:\SAPbits\SAP_HANA_STUDIO\
     $hanadest = "C:\SapBits"
     $sapcarUri = $baseUri + "/SapBits/SAP_HANA_STUDIO/sapcar.exe" 
-    $hanastudioUri = $baseUri + "/SapBits/SAP_HANA_STUDIO/IMC_STUDIO2_212_2-80000323.SAR" 
+    $hanastudioUri = $baseUri + "/SapBits/SAP_HANA_STUDIO/IMC_STUDIO2_223_0-80000353.SAR" 
     $jreUri = $baseUri + "/SapBits/SAP_HANA_STUDIO/serverjre-9.0.4_windows-x64_bin.tar.gz"
     $puttyUri = "https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi"
     $7zUri = "http://www.7-zip.org/a/7z1701-x64.msi"
     $sapcardest = "C:\SapBits\SAP_HANA_STUDIO\sapcar.exe"
-    $hanastudiodest = "C:\SapBits\SAP_HANA_STUDIO\IMC_STUDIO2_212_2-80000323.SAR"
+    $hanastudiodest = "C:\SapBits\SAP_HANA_STUDIO\IMC_STUDIO2_223_0-80000353.SAR"
     $jredest = "C:\Program Files\serverjre-9.0.4_windows-x64_bin.tar.gz"
     $puttydest = "C:\SapBits\SAP_HANA_STUDIO\putty-64bit-0.70-installer.msi"
     $7zdest = "C:\Program Files\7z.msi"
@@ -41,7 +41,7 @@ param (
     .\putty-64bit-0.70-installer.msi /quiet
     
     write-host "extracting and installing HANA Studio"
-    .\sapcar.exe -xfv IMC_STUDIO2_212_2-80000323.SAR
+    .\sapcar.exe -xfv IMC_STUDIO2_223_0-80000353.SAR
     
     set PATH=%PATH%C:\Program Files\jdk-9.0.1\bin;
     set HDB_INSTALLER_TRACE_FILE=C:\Users\testuser\Documents\hdbinst.log
