@@ -31,9 +31,9 @@
   },
     "variables": {
         "subnetRef": "[parameters('mgmtSubnetRef')]",
-        "vmName": "hanajb",
-        "vNicName": "hanajbnic",
-        "PIPName": "hanajbpip",
+        "vmName": "HN2SAML",
+        "vNicName": "HN2SAMLnic",
+        "PIPName": "HN2SAMLpip",
         "vhdStorageAccountName": "[uniqueString(resourceGroup().id, 'storage')]",
         "scriptFolder": ".",
         "scriptFileName": "hanastudio.ps1",
@@ -98,7 +98,7 @@
             ],
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_D1_v2"
+                    "vmSize": "Standard_E2s_v3"
                 },
                 "osProfile": {
                     "computerName": "[variables('vmName')]",

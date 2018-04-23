@@ -7,12 +7,12 @@ param (
     $hanadest = "C:\SapBits"
     $sapcarUri = $baseUri + "/SapBits/SAP_HANA_STUDIO/sapcar.exe" 
     $hanastudioUri = $baseUri + "/SapBits/SAP_HANA_STUDIO/IMC_STUDIO2_212_2-80000323.SAR" 
-    $jreUri = $baseUri + "/SapBits/SAP_HANA_STUDIO/serverjre-9.0.1_windows-x64_bin.tar.gz"
+    $jreUri = $baseUri + "/SapBits/SAP_HANA_STUDIO/serverjre-9.0.4_windows-x64_bin.tar.gz"
     $puttyUri = "https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi"
     $7zUri = "http://www.7-zip.org/a/7z1701-x64.msi"
     $sapcardest = "C:\SapBits\SAP_HANA_STUDIO\sapcar.exe"
     $hanastudiodest = "C:\SapBits\SAP_HANA_STUDIO\IMC_STUDIO2_212_2-80000323.SAR"
-    $jredest = "C:\Program Files\serverjre-9.0.1_windows-x64_bin.tar.gz"
+    $jredest = "C:\Program Files\serverjre-9.0.4_windows-x64_bin.tar.gz"
     $puttydest = "C:\SapBits\SAP_HANA_STUDIO\putty-64bit-0.70-installer.msi"
     $7zdest = "C:\Program Files\7z.msi"
     $jrepath = "C:\Program Files"
@@ -33,8 +33,8 @@ param (
     cd $jrepath
     .\7z.msi /quiet
     cd "C:\Program Files\7-Zip\"
-    .\7z.exe e "C:\Program Files\serverjre-9.0.1_windows-x64_bin.tar.gz" "-oC:\Program Files"
-    .\7z.exe x -y "C:\Program Files\serverjre-9.0.1_windows-x64_bin.tar" "-oC:\Program Files"
+    .\7z.exe e "C:\Program Files\serverjre-9.0.4_windows-x64_bin.tar.gz" "-oC:\Program Files"
+    .\7z.exe x -y "C:\Program Files\serverjre-9.0.4_windows-x64_bin.tar" "-oC:\Program Files"
     
     cd $hanapath
     write-host "installing PuTTY"
